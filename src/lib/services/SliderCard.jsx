@@ -14,13 +14,13 @@ const Services = [
     syles: "bg-orange-100 text-orange-500 hover:bg-orange-500"
   },
   {
-    title: "Diseño de circuitos",
+    title: "Diseño de Circuitos",
     description: "Ofrecemos diseño de circuitos impresos (PCB) de alta calidad para tus proyectos electrónicos. Nuestros diseños son precisos y eficientes, utilizando las mejores prácticas de la industria para garantizar rendimiento y fiabilidad, todo a un costo competitivo.",
     Icon: CircuitIcon,
     syles: "bg-teal-100 text-teal-500 hover:bg-teal-500"
   },
   {
-    title: "Telemetría y redes",
+    title: "Telemetría y Redes",
     description: "Desarrollamos sistemas avanzados de telemetría y redes para asegurar la comunicación efectiva entre tus dispositivos. Nuestros servicios incluyen la integración de tecnologías inalámbricas y cableadas, garantizando la transmisión de datos en tiempo real y la máxima seguridad.",
     Icon: NetworkIcon,
     syles: "bg-indigo-100 text-indigo-500 hover:bg-indigo-500"
