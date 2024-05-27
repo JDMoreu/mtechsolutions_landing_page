@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/NavBar.astro';
+import Hero from '../components/Hero.astro';
+import FQA from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import Services from '../lib/services/SliderCard.jsx'
+import Feactures from '../components/feactures/Feactures.astro';
+---
+
+<Layout title="mtechsolutions">
+	<NavBar/>
+	<Hero  />
+	<Services client:visible/>
+	<Feactures />
+	<Contact />
+	<FQA />;
+	<Footer />
+</Layout>
+
+<style>
+
+</style>

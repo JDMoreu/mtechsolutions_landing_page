@@ -1,0 +1,76 @@
+---
+const { class: id } = Astro.props
+
+import {EasyIcon, SecurityIcon, FastIcon, CustomIcon} from './icons.jsx'
+
+
+const Item = [
+
+    {
+        title: 'Facilidad de uso',
+        description: 'Gestionamos y estructuramos tus proyectos de forma sencila y escalable. Expertos en la creación de soluciones tecnológicas que se adaptan a tus necesidades.',
+        Icon: EasyIcon
+    },
+    {
+        title: 'Seguridad garantizada',
+        description: 'Su seguridad es nuestra prioridad. Nos encargamos de que tu proyecto sea seguro y confiable. La seguridad de tu información es nuestra responsabilidad.',
+        Icon: SecurityIcon
+    },
+    {
+        title: 'Rapida atención',
+        description: 'Para que puedas disfrutar de tus proyectos sin preocupaciones, simpre estamos dispuestos a ayudarte.',
+        Icon: FastIcon,
+    },
+    {
+        title: 'Servicio personalizado',
+        description: 'Adaptámos sus necesidades y requerimientos. Eres libre de elegir los servicios que necesitas, nosotros nos encargamos de hacerlos realidad.',
+        Icon: CustomIcon,
+    }
+]
+
+---
+
+	<section id="nosotros" class="py-24 lg:mb-40 dark:bg-gray-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+              <div class="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+                  <div class="relative w-full text-center lg:text-left lg:w-2/4">
+                      <h2 class=" text-2xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">Disfrute de las mejores prestaciones</h2>
+                  </div>
+                  <div class="relative w-full text-center  lg:text-left lg:w-2/4">
+                      <p class="lg:text-lg font-normal text-gray-500 dark:text-gray-400 mb-5">Cada proyecto es una oportunidad para innovar. En Mtechsolutions, trabajamos incansablemente para convertir tu visión en una realidad tecnológica que supere todas las expectativas.</p> 
+                      
+                          </a> 
+                  </div>
+              </div>
+              <div class="flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+
+
+                {
+                    Item.map(({title, description, Icon}) => (
+
+                    <div class="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-72 xl:p-7 xl:w-1/4 hover:bg-blue-600 dark:hover:bg-gray-600">
+                      <div class="bg-white text-blue-600 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                            <Icon />
+                      </div>
+                      <h4 class="text-xl font-medium text-gray-900 dark:text-gray-200 mb-3 capitalize transition-all duration-500 group-hover:text-white">{title}</h4>
+                      <p class="text-sm text-pretty font-normal text-gray-500 dark:text-gray-400 transition-all duration-500 leading-5 group-hover:text-white">
+                          {description}
+                      </p>
+                    </div>
+
+
+                    ))
+                }
+
+
+
+
+                
+                 
+                  </div>
+              </div>
+        </div>
+      </section>
+                                            
+                                            								

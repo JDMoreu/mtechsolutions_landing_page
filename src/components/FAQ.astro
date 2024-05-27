@@ -1,0 +1,76 @@
+---
+
+const Items =[
+  {
+    title: 'Cuál es el proceso de trabajo de MTechSolutions?',
+    content: 'En MTechSolutions, seguimos un proceso meticuloso que comienza con la comprensión de tus necesidades y objetivos, seguido de la planificación, diseño, desarrollo, implementación y mantenimiento. Nuestro objetivo es ofrecerte soluciones personalizadas y de alta calidad en cada etapa del proyecto.',
+    style: "rounded-t-xl  border-b-0"
+  },
+  {
+    title: 'Cuál es la experiencia de MTechSolutions en el mercado?',
+    content: 'Con años de experiencia en la industria, MTechSolutions ha trabajado con una amplia gama de clientes y proyectos. Nuestro equipo está formado por profesionales altamente cualificados y apasionados que están comprometidos con la excelencia en cada proyecto que emprendemos.'
+
+  },
+  {
+    title: 'Como puedo contactarlos?',
+    content: 'Puedes ponerte en contacto con MTechSolutions a través de nuestro formulario de contacto en línea, por correo electrónico, teléfono o visitándonos en nuestra oficina. Estamos aquí para responder cualquier pregunta que tengas y ayudarte en lo que necesites.'
+
+  },
+  {
+    title: 'Cuánto tiempo lleva completar un proyecto con MTechSolutions?',
+    content: 'El tiempo necesario para completar un proyecto puede variar según su complejidad y alcance. Trabajamos estrechamente con nuestros clientes para establecer plazos realistas y cumplir con ellos de manera eficiente. Para obtener una estimación precisa del tiempo, ¡contáctanos para discutir tu proyecto específico!'
+
+  }
+]
+
+---
+
+<section class="py-24 dark:bg-gray-900">
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols- gap-20">
+
+
+        
+    <div class="grid ">
+  
+      <span class="flex flex-col justify-end items-end">
+        <p class="text-sm font-medium text-gray-700/90 dark:text-gray-400 mb-4"> Más preguntado</p>
+        <h1 class=" text-2xl lg:text-4xl text-gray-800 dark:text-gray-200 font-bold w-30"> Preguntas más frecuentes</h1>
+      </span>
+  
+    </div>
+  
+    <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white" class=" grid ">
+
+
+      {
+        Items.map((item, index) => (
+            <h2 id={`accordion-color-heading-${index}`}>
+              <button type="button" class={`flex items-center justify-between w-full p-5 font-medium ${item.style}rtl:text-right text-gray-500 border border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3`} data-accordion-target={`#accordion-color-body-${index}`} aria-expanded="true" aria-controls={`accordion-color-body-${index}`}>
+                <span>{item.title}</span>
+                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+              </button>
+            </h2>
+            <div id={`accordion-color-body-${index}`} class="hidden" aria-labelledby={`accordion-color-heading-${index}`}>
+              <div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">{item.content}</p>
+              </div>
+            </div>
+       ))
+      }
+
+
+    
+
+  </div>
+  
+</section>
+
+
+
+
+
+                                        
+                                        

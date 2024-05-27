@@ -1,0 +1,48 @@
+---
+// Supports weights 300-900
+import '@fontsource-variable/rubik';
+import { ViewTransitions } from "astro:transitions"
+// import Swiper bundle with all modules installed
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+
+---
+
+<!doctype html>
+<html class="ligth" lang="es">
+	<head>
+		<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="dark:bg-gray-900 dark:text-white">
+		<main >
+			<slot/>
+		</main>
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: 'Rubik Variable', sans-serif;
+		scroll-behavior: smooth;
+	}
+</style>
+
+<script>
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+	 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+	 document.documentElement.classList.add('dark')
+	 } else {
+	 document.documentElement.classList.remove('dark')
+	 }
+</script>
