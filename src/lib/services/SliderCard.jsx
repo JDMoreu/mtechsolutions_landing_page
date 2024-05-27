@@ -3,38 +3,44 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { WebIcon, CircuitIcon, NetworkIcon, IoTIcon, AutomaIcon } from './icons.jsx';
+import { WebIcon, CircuitIcon, NetworkIcon, IoTIcon, AutomaIcon, SupportIcon } from './icons.jsx';
 import './style.css';
 
 const Services = [
   {
     title: "Desarollo Web",
-    description: "Desarrollamos sitios web a medida, con un diseño único y personalizado, adaptado a tus necesidades.",
+    description: "Creamos sitios web a medida con un diseño único y personalizado que se adapta perfectamente a tus necesidades. Nuestro enfoque incluye una interfaz de usuario intuitiva, optimización para motores de búsqueda (SEO) y compatibilidad con dispositivos móviles para garantizar una experiencia de usuario excepcional.",
     Icon: WebIcon,
     syles: "bg-orange-100 text-orange-500 hover:bg-orange-500"
   },
   {
     title: "Diseño de circuitos",
-    description: "Diseñamos circuitos impresos para tus proyectos electrónicos, con la mejor calidad y al mejor precio.",
+    description: "Ofrecemos diseño de circuitos impresos (PCB) de alta calidad para tus proyectos electrónicos. Nuestros diseños son precisos y eficientes, utilizando las mejores prácticas de la industria para garantizar rendimiento y fiabilidad, todo a un costo competitivo.",
     Icon: CircuitIcon,
     syles: "bg-teal-100 text-teal-500 hover:bg-teal-500"
   },
   {
     title: "Telemetría y redes",
-    description: "Diseñamos y desarrollamos sistemas de telemetría y redes para la comunicación de tus dispositivos.",
+    description: "Desarrollamos sistemas avanzados de telemetría y redes para asegurar la comunicación efectiva entre tus dispositivos. Nuestros servicios incluyen la integración de tecnologías inalámbricas y cableadas, garantizando la transmisión de datos en tiempo real y la máxima seguridad.",
     Icon: NetworkIcon,
     syles: "bg-indigo-100 text-indigo-500 hover:bg-indigo-500"
   },
   {
-    title: "Internet de las cosas",
-    description: "Desarrollamos sistemas de IoT para la automatización de tus dispositivos y la recolección de datos.",
+    title: "Internet de las Cosas (IoT)",
+    description: "Especializados en el desarrollo de soluciones IoT, facilitamos la automatización de dispositivos y la recolección de datos en tiempo real. Nuestras soluciones permiten la monitorización y control remoto de tus sistemas, optimizando procesos y mejorando la eficiencia operativa.",
     Icon: IoTIcon,
     syles: "bg-pink-100 text-pink-500 hover:bg-pink-500"
   },
   {
     title: "Automatización",
-    description: "Automatizamos tus procesos para que puedas dedicar tu tiempo a lo que realmente importa.",
+    description: "Proveemos soluciones de automatización para optimizar tus procesos operativos, permitiéndote concentrar tus recursos en actividades estratégicas. Implementamos tecnología avanzada para incrementar la productividad y reducir costos operativos.",
     Icon: AutomaIcon,
+    syles: "bg-blue-100 text-blue-500 hover:bg-blue-500"
+  },
+  {
+    title: "Soporte Técnico",
+    description: "Ofrecemos soporte técnico integral para tus dispositivos y sistemas, asegurando que puedas operar sin interrupciones. Nuestro equipo de expertos está disponible para resolver cualquier problema técnico, garantizando un funcionamiento continuo y eficiente.",
+    Icon: SupportIcon,
     syles: "bg-blue-100 text-blue-500 hover:bg-blue-500"
   }
 ];
