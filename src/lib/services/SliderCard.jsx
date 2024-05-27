@@ -23,19 +23,19 @@ const Services = [
     title: "Telemetría y Redes",
     description: "Desarrollamos sistemas avanzados de telemetría y redes para asegurar la comunicación efectiva entre tus dispositivos. Nuestros servicios incluyen la integración de tecnologías inalámbricas y cableadas, garantizando la transmisión de datos en tiempo real y la máxima seguridad.",
     Icon: NetworkIcon,
-    syles: "bg-indigo-100 text-indigo-500 hover:bg-indigo-500"
+    syles: "bg-pink-100 text-pink-500 hover:bg-pink-500"
   },
   {
     title: "Internet de las Cosas (IoT)",
     description: "Especializados en el desarrollo de soluciones IoT, facilitamos la automatización de dispositivos y la recolección de datos en tiempo real. Nuestras soluciones permiten la monitorización y control remoto de tus sistemas, optimizando procesos y mejorando la eficiencia operativa.",
     Icon: IoTIcon,
-    syles: "bg-pink-100 text-pink-500 hover:bg-pink-500"
+    syles: "bg-indigo-100 text-indigo-500 hover:bg-indigo-500"
   },
   {
     title: "Automatización",
     description: "Proveemos soluciones de automatización para optimizar tus procesos operativos, permitiéndote concentrar tus recursos en actividades estratégicas. Implementamos tecnología avanzada para incrementar la productividad y reducir costos operativos.",
     Icon: AutomaIcon,
-    syles:  "bg-yellow-50 text-yellow-500 hover:bg-yellow-500"
+    syles:  "bg-red-100 text-red-500 hover:bg-red-500"
   },
   {
     title: "Soporte Técnico",
