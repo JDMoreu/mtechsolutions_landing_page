@@ -1,0 +1,140 @@
+---
+
+import {EasyIcon, SecurityIcon, FastIcon, CustomIcon} from './icons.jsx'
+
+
+const Item = [
+
+    {
+        title: 'Facilidad de uso',
+        description: 'Gestionamos y estructuramos tus proyectos de forma sencila y escalable. Expertos en la creación de soluciones tecnológicas que se adaptan a tus necesidades.',
+        Icon: EasyIcon
+    },
+    {
+        title: 'Seguridad garantizada',
+        description: 'Su seguridad es nuestra prioridad. Nos encargamos de que tu proyecto sea seguro y confiable. La seguridad de tu información es nuestra responsabilidad.',
+        Icon: SecurityIcon
+    },
+    {
+        title: 'Rapida atención',
+        description: 'Para que puedas disfrutar de tus proyectos sin preocupaciones, simpre estamos dispuestos a ayudarte.',
+        Icon: FastIcon,
+    },
+    {
+        title: 'Servicio personalizado',
+        description: 'Adaptámos sus necesidades y requerimientos. Eres libre de elegir los servicios que necesitas, nosotros nos encargamos de hacerlos realidad.',
+        Icon: CustomIcon,
+    }
+]
+
+---
+
+<section id="nosotros" class="pt-24 lg:mb-40 dark:bg-gray-900">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+		
+		<h2 class="text-4xl font-semibold text-center dark:text-gray-200">Nosotros</h2>
+		<div class="grid lg:grid-cols-2 py-10 gap-6">
+
+
+			<div class="grid">
+
+				
+				<div class="flex flex-col gap-y-4 pt-10 pr-6">
+					<h4 class=" text-gray-500 dark:text-gray-400">Información relevante</h4>
+					<h3 class="text-4xl font-bold text-blue-600">Somos una empresa Colombiana especializada en soluciones TI.</h3>
+					<p class="text-gray-500 dark:text-gray-300 font-medium border-b-2 pb-10">Mtechsolutions nació como una respuesta a los desafíos de implementación de nuevas tecnologías emergentes y la Industria 4.0. Nuestro objetivo es asesorar, ayudar e impulsar la innovación y actualización en la industria colombiana. </p>
+					<p class="text-gray-400 dark:text-gray-400">Ponemos la tecnología a tu alcance. Olvídate de los problemas, nosotros nos encargamos. 😉</p>
+
+					<div class="flex items-end mt-10">
+
+						<a href="/#caracteristicas" class=" hidden lg:flex">
+							<button type="button"
+							class="group inline-flex items-center justify-center whitespace-nowrap rounded-2xl py-2 px-4 align-middle text-sm font-semibold leading-none transition-all duration-300 ease-in-out disabled:cursor-not-allowed
+							 bg-gray-100 stroke-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-200 hover:stroke-gray-200
+							 dark:bg-gray-800 dark:stroke-blue-600 dark:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-gray-200 dark:hover:stroke-gray-200 h-[42px] 
+							 min-w-[42px] gap-2 disabled:bg-slate-400 disabled:stroke-slate-400 disabled:text-slate-400 disabled:hover:bg-slate-100"	
+							>
+							<span>Más Información</span>
+							  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.5" class="size-6 stroke-inherit rotate-90">
+									<path d="M11 16L15 12L11 8" stroke-linecap="round" stroke-linejoin="round"></path>
+									<circle cx="12" cy="12" r="9"></circle>
+							  </svg>
+						  </button>
+						</a> 
+					</div>
+
+
+				</div>
+				
+			</div>
+				
+
+			<div class="grid gap-y-6 pt-10">
+
+				<div class="grid grid-cols-1 rounded-2xl bg-gray-50 dark:bg-gray-800 p-10 hover:bg-blue-100 dark:hover:bg-gray-700 transition-all duration-500">
+					<div class="flex">
+						<div class="mb-4">
+							<h3 class="text-2xl font-semibold text-blue-600"> Misión</h3>
+						</div>
+					</div>
+					<div class="grid">
+						<p class="text-gray-600 text-md leading-6 dark:text-gray-300">Proporcionar soluciones tecnológicas innovadoras y personalizadas que impulsen la transformación digital de nuestros clientes. Nos comprometemos a ofrecer servicios de alta calidad que faciliten la implementación de nuevas tecnologías y la adopción de la Industria 4.0, contribuyendo al crecimiento y modernización de la industria colombiana. </p>
+					</div>
+				</div>
+				<div class="grid grid-cols-1 rounded-2xl bg-gray-50 dark:bg-gray-800 p-10 hover:bg-blue-100 dark:hover:bg-gray-700 transition-all duration-500">
+					<div class="flex">
+						<div class="mb-4">
+							<h3 class="text-2xl font-semibold text-blue-600"> Visión</h3>
+						</div>
+					</div>
+					<div class="grid">
+						<p class="text-gray-600 text-md leading-6 dark:text-gray-300">Ser reconocidos como líderes en el sector tecnológico, destacándonos por nuestra capacidad de innovación, adaptabilidad y excelencia en el servicio. Aspiramos a ser el socio estratégico preferido para empresas que buscan transformar sus operaciones mediante soluciones tecnológicas avanzadas y personalizadas, impulsando así el desarrollo sostenible y competitivo de la industria en Colombia y más allá. </p>
+					</div>
+				</div>
+
+
+			</div>
+
+
+	</div>
+</section>
+
+<section id="caracteristicas" class="pb-24 lg:mb-40 dark:bg-gray-900 pt-20">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+		  <div class="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+			  <div class="relative w-full text-center lg:text-left lg:w-2/4">
+				  <h2 class=" text-2xl lg:text-3xl font-bold text-gray-800 dark:text-gray-200 leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">Disfrute de las mejores prestaciones</h2>
+			  </div>
+			  <div class="relative w-full text-center  lg:text-left lg:w-2/4">
+				  <p class="lg:text-lg font-normal text-gray-500 dark:text-gray-400 mb-5">Cada proyecto es una oportunidad para innovar. En Mtechsolutions, trabajamos incansablemente para convertir tu visión en una realidad tecnológica que supere todas las expectativas.</p> 
+				  
+					  </a> 
+			  </div>
+		  </div>
+		  <div class="flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+
+
+			{
+				Item.map(({title, description, Icon}) => (
+
+				<div class="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-72 xl:p-7 xl:w-1/4 hover:bg-blue-600 dark:hover:bg-gray-600">
+				  <div class="bg-white text-blue-600 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+						<Icon />
+				  </div>
+				  <h4 class="text-xl font-medium text-gray-900 dark:text-gray-200 mb-3 capitalize transition-all duration-500 group-hover:text-white">{title}</h4>
+				  <p class="text-sm text-pretty font-normal text-gray-500 dark:text-gray-400 transition-all duration-500 leading-5 group-hover:text-white">
+					  {description}
+				  </p>
+				</div>
+
+
+				))
+			}
+			
+			 
+			  </div>
+		  </div>
+	</div>
+</section>

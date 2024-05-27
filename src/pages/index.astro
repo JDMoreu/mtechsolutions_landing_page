@@ -5,15 +5,15 @@ import Hero from '../components/Hero.astro';
 import FQA from '../components/FAQ.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
-import Services from '../lib/services/SliderCard.jsx'
-import Feactures from '../components/feactures/Feactures.astro';
+import Services from '../lib/services/SliderCard.jsx';
+import About from '../components/About.astro';
 ---
 
-<Layout title="mtechsolutions especialistas en soluciones tecnológicas">
+<Layout title="Mtechsolutions especialistas en soluciones tecnológicas">
 	<NavBar/>
 	<Hero  />
 	<Services client:visible/>
-	<Feactures />
+	<About />
 	<Contact />
 	<FQA />
 	<Footer />
