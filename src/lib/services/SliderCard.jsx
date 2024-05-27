@@ -35,7 +35,7 @@ const Services = [
     title: "Automatización",
     description: "Proveemos soluciones de automatización para optimizar tus procesos operativos, permitiéndote concentrar tus recursos en actividades estratégicas. Implementamos tecnología avanzada para incrementar la productividad y reducir costos operativos.",
     Icon: AutomaIcon,
-    syles: "bg-blue-100 text-blue-500 hover:bg-blue-500"
+    syles:  "bg-yellow-50 text-yellow-500 hover:bg-yellow-500"
   },
   {
     title: "Soporte Técnico",
