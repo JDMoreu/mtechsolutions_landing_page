@@ -28,7 +28,10 @@
                                  +57 300-123-4560
                             </h2>
                             
-                            <button type="button" class="text-white bg-white/10  font-medium rounded-full text-sm px-4 py-2.5 text-center me-2 mb-2 ">Chatear</button>
+                            <a type="button"  href=""
+                             class="text-white bg-white/10 hover:bg-white/20 font-medium rounded-full text-sm px-4 py-2.5 text-center me-2 mb-2 ">
+                             Chatear
+                            </a>
                         </div>     
                  </div>
 
@@ -52,8 +55,8 @@
                             info@mtechsolutions.app
                         </h2>
                         
-                        <a type="button" href="mailto:info@mtechsolutions.app" class=" bg-black/10 dark:bg-white/10 font-medium rounded-full text-sm px-5 py-2.5 text-center text-gray-600 dark:text-gray-300 me-2 mb-2 ">
-                            Escribir
+                        <a type="button" href="mailto:info@mtechsolutions.app" class=" bg-black/10 hover:bg-black/20 hover:text-gray-800 dark:bg-white/10 dark:hover:bg-white/20 font-medium rounded-full text-sm px-5 py-2.5 text-center text-gray-600 dark:text-gray-300 me-2 mb-2 ">
+                            Redactar
                         </a>
                     </div>     
              </div>
@@ -62,13 +65,64 @@
 
 
 
-          <div class="bg-gray-50 dark:bg-gray-800 p-10  rounded-2xl grid lg:col-span-3">
-              <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400  shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Nombre">
-              <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Email">
-              <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Teléfono">
-              <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-full border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Mesage">
-              <button class="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 hover:bg-blue-800 bg-blue-600 shadow-sm">Enviar</button>
-      </div>
+            <form  method="POST" id="form"
+            class="bg-gray-50 dark:bg-gray-800 p-10  rounded-2xl grid lg:col-span-3 needs-validation">
+
+             <input type="hidden" name="access_key" value="e34a895d-bdae-4783-b6af-30e1d3b2a777">
+
+              <input type="text" name="name" class="w-full h-12 text-gray-300 placeholder-gray-400  shadow-sm bg-transparent text-lg font-normal leading-7 rounded-2xl border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Nombre">
+
+              <input type="email" name="email" class="w-full h-12 text-gray-300 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-2xl border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Email">
+
+              <input  type="text" name="tel" class="w-full h-12 text-gray-300 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-2xl border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Teléfono">
+
+              <textarea name="message" class="w-full h-12 text-gray-300 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-2xl border border-gray-200 dark:border-gray-700 focus:outline-none pl-4 mb-10" placeholder="Mensaje"></textarea>
+
+              <button type="submit" class="w-full h-12 text-white text-base font-semibold leading-6 rounded-2xl transition-all duration-700 hover:bg-blue-800 bg-blue-600 shadow-sm">Enviar</button>
+              <div id="result"></div>
+            </form>
     </div>
   </section>
                                           
+  <script is:inline>
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    
+    form.addEventListener('submit', function(e) {
+        const formData = new FormData(form);
+        e.preventDefault();
+    
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        result.innerHTML = "Please wait..."
+    
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+    </script>

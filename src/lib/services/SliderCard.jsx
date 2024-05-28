@@ -90,7 +90,7 @@ const App = () => {
         >
           {Services.map(({ title, description, Icon, syles }, index) => (
             <SwiperSlide key={index}>
-              <div className="group bg-white dark:bg-gray-800 border border-solid border-gray-300 dark:border-gray-600 rounded-xl p-6 transition-all duration-500  h-96 hover:border-indigo-600 hover:shadow-sm slide_active:border-indigo-600">
+              <div className="group bg-white dark:bg-gray-800 border border-solid border-gray-100 dark:border-gray-800 rounded-xl p-6 transition-all duration-500  h-96 hover:border-blue-600 hover:shadow-sm slide_active:border-blue-600">
                 <div className="flex items-center justify-center mb-4">
                   <span className={`flex items-center justify-center ${syles} transition-all duration-500 hover:text-white w-20 h-20 rounded-lg`}>
                     <Icon />
